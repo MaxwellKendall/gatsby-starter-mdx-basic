@@ -8,10 +8,21 @@ module.exports = {
     author: '@chrisbiscardi',
   },
   plugins: [
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: { default: path.resolve('./src/components/layout.js') },
+        plugins: [`gatsby-remark-images`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true
+            },
+          },
+        ],
       },
     },
     'gatsby-plugin-react-helmet',

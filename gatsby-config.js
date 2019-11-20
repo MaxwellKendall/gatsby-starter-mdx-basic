@@ -8,6 +8,7 @@ module.exports = {
     author: '@chrisbiscardi',
   },
   plugins: [
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
